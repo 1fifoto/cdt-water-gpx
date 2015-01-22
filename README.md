@@ -1,3 +1,5 @@
+Convertor from Continental Divide Trail Water Report in Google Docs Spreadsheet format to GPX file format 
+
 spreadsheet/CDT WATER 2014.xlsx
 ===============================
 The `spreadsheet/CDT WATER 2014.xlsx` is a backup of the Google docs CDT Water
