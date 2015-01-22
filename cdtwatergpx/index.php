@@ -17,9 +17,13 @@
             $wpt->addAttribute('lat', $point[7]); // add latitude attribute to waypoint element
             $wpt->addAttribute('lon', $point[8]); // addlongitude attribute to waypoint element
 
-            $wpt->addChild('time'); // create time child of waypoint
-            $dateParts = explode(" ", $point[5]); // Wed Apr 16 00:00:00 GMT-07:00 2014
-            $wpt->time = $dateParts[1] . " " . $dateParts[2] . ", " . $dateParts[5]; // simplify to: Apr 16, 2014
+            if ($point[5] != "") {
+                $wpt->addChild('time'); // create time child of waypoint
+                $date = DateTime::createFromFormat("D M d H:i:s P Y", $point[5]); // Fri Apr 11 02:00:00 GMT-05:00 2014
+                $date->setTimeZone(new DateTimeZone('America/Denver')); // Set mountain time zone
+                $date->setTime(12, 0, 0); // Set noon
+                $wpt->time = $date->format("Y-m-d\TH:i:sP"); // convert to ISO8601: 2014-04-11T02:00:00Z
+            }
 
             // Some of the names and desc may contain an ampersand.
             // See: http://stackoverflow.com/questions/552957/rationale-behind-simplexmlelements-handling-of-text-values-in-addchild-and-adda
