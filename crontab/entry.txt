@@ -1,0 +1,2 @@
+MAILTO="bwatt@1fifoto.com"
+@hourly wget -q https://script.google.com/macros/s/AKfycbwXnPrfzUamjxLtQlCdH6NHtMv8W-AHKvKg9hLvLs78IjRMNXJZ/exec?jsonp=plotWaterPoints -O - > /home/bwattftp/1fifoto.com/cdtwatergpx/water-points.js
