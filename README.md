@@ -1,4 +1,4 @@
-Convertor from Continental Divide Trail Water Report in Google Docs Spreadsheet format to GPX file format 
+Convertor from Continental Divide Trail Water Report in Google Docs Spreadsheet format to GPX XML file 
 
 spreadsheet/CDT WATER 2014.xlsx
 ===============================
@@ -10,23 +10,14 @@ docs.
 
 script/Code.gs
 ==============
-The `script/Code.gs` file is a Google docs script file which when run
-(typically using an hourly cron job) converts the Google docs CDT Water
-Report spreadsheet to a `water-points.js` file which is then used by the
-web-site `cdtwatergpx/index.php` as described below. It can be used as a
-template for a new Google docs script file. To create a new script based
-upon this, update the SPREADSHEET_ID, and SHEET_NAME to reference a
-different Google docs spreadsheet. 
-
-crontab/entry.txt
-=================
-You must also update the cron job entry on your website to execute the Google
-docs script file which produces the `water-points.js` file. A sample cron job
-entry is found in entry.txt.
+The `script/Code.gs` file is a Google docs script file which when run converts
+the entire Google docs CDT Water Report spreadsheet to a JSON with padding
+(JSONP) file which is then used by the web-site `cdtwatergpx/index.php` as
+described below. It can be used as a template for a new Google docs script
+file. To create a new script based upon this, update the SPREADSHEET_ID, and
+SHEET_NAME to reference a different Google docs spreadsheet. 
 
 cdtwatergpx/index.php
 ======================================================================
-The `cdtwatergpx/index.php` web-site files convert the `water-points.js` file
-into a GPX XML download `cdtwatergpx.gpx` file. Note: A sample
-`cdtwatergpx/water-points.js` file is provided even though it is overwritten
-when the cron job runs described above.
+The `cdtwatergpx/index.php` web-site file access the URL and creates a GPX XML
+file to be downloaded as `cdtwatergpx.gpx`.
