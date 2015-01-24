@@ -9,7 +9,7 @@ var SHEET_NAME = 'WATER';
 function doGet(request) {
     var callback = request.parameters.jsonp;
     var range = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME).getDataRange();
-    var json = callback + '(' + JSON.stringify(range.getValues()) + ')';
+    var json = callback + '(' + JSON.stringify(range.getValues(), null, 4) + ')';
     return ContentService.createTextOutput(json).setMimeType(ContentService.MimeType.JSON);
 }
 
