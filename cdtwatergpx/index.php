@@ -1,7 +1,7 @@
 <?php
     
 //    $jsonpContents = file_get_contents("water-points.js"); // read in JSON with padding string
-    $jsonpContents = file_get_contents("https://script.google.com/macros/s/AKfycbwHHCmlw8Y9PSEwIz5N5E_1pqhw9wsRDFDLEF2lV51BvhEvnXw/exec?jsonp=plotWaterPoints"); // directly read in JSON with padding string
+    $jsonpContents = file_get_contents("https://script.google.com/macros/s/AKfycbySRs1sQTZYOC87JCNSedQ4iB_hSQZpRZHaRBsg0rAFyr6nRuo/exec?jsonp=plotWaterPoints"); // directly read in JSON with padding string
     $contents = substr(substr($jsonpContents,16),0,-1); // chop off JSON padding to create pure JSON
     $points = json_decode($contents, true); // convert from pure JSON to array
 
