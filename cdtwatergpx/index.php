@@ -5,7 +5,7 @@
     $contents = substr(substr($jsonpContents,16),0,-1); // chop off JSON padding to create pure JSON
     $points = json_decode($contents, true); // convert from pure JSON to array
 
-    $xml = new SimpleXMLElement("<?xml version=\"1.0\" encoding=\"utf-8\" ?><gpx xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.topografix.com/GPX/1/1\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\" version=\"1.1\" creator=\"bwatt@1fifoto.com\" ></gpx>");
+    $xml = new SimpleXMLElement("<?xml version=\"1.0\" encoding=\"UTF-8\"?><gpx xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://www.topografix.com/GPX/1/1\" xsi:schemaLocation=\"http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd\" version=\"1.1\" creator=\"bwatt@1fifoto.com\"></gpx>");
 
     foreach ($points as $point) {
         $point[8] = "-".$point[8]; // add minus sign to GPS (W)
