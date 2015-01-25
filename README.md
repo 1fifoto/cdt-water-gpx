@@ -10,15 +10,7 @@ and upload it to Google docs.
 
 script/Code.gs
 ==============
-The `script/Code.gs` file is a Google docs script file which when run converts
-the entire Google docs CDT Water Report spreadsheet to a JSON with padding
-(JSONP) file which is then used by the web-site `cdtwatergpx/index.php` as
-described below. It can be used as a template for a new Google docs script
-file. To create a new script based upon this, update the SPREADSHEET_ID, and
-SHEET_NAME to reference a different Google docs spreadsheet. 
-
-cdtwatergpx/index.php
-======================================================================
-The `cdtwatergpx/index.php` web-site file access the Google Docs CDT Water
-Report spreadsheet URL and creates a GPX XML file to be downloaded as
-`cdtwatergpx.gpx`.
+The `script/Code.gs` file is a Google docs script file which when run creates a
+GPX XML file to be downloaded as `cdtwatergpx.gpx`. The GPX XML file contains
+the necessary XML Namespaces to allow it to be verified using the following
+command: `SAXCount -v=always -n -s -f cdtwater.gpx`
