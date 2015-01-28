@@ -59,8 +59,9 @@ function doGet(request) {
             wpt.addContent(name); // add name as child element of waypoint
 
             var desc = XmlService.createElement("desc", ns); // create description element
-            var descEncoded = htmlspecialchars(values[i][4], ENT_DISALLOWED); // Encode special characters
-            desc.setText(descEncoded); // set text of description element
+            // var descEncoded = htmlspecialchars(values[i][4], ENT_DISALLOWED); // Encode special characters
+            // desc.setText(descEncoded); // set text of description element
+            desc.setText(values[i][4]); // set text of description element
             wpt.addContent(desc); // add description as child element of waypoint
            
         }
