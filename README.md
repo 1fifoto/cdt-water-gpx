@@ -5,8 +5,8 @@ spreadsheet/CDT WATER 2015.xlsx
 The `spreadsheet/CDT WATER 2015.xlsx` is a backup of the Google Docs CDT Water
 Report spreadsheet in Microsoft EXCEL spreadsheet format. It has the following
 columns: Jonathan Ley Map Number, Bear Creek mile, Accumulated Bear Creek
-mileage, Name, Status, Date Reported, and Reported By. To use it, you import
-and upload it to Google docs. 
+mileage, Name, Status, Date Reported, Reported By, GPS (N), GPS (W), and
+Condition. To use it, you import and upload it to Google docs. 
 
 script/Code.gs
 ==============

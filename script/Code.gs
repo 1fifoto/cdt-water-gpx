@@ -63,6 +63,19 @@ function doGet(request) {
             // desc.setText(descEncoded); // set text of description element
             desc.setText(values[i][4]); // set text of description element
             wpt.addContent(desc); // add description as child element of waypoint
+          
+            var sym = XmlService.createElement("sym", ns); // create sym element
+            var conditionUC = values[i][9].toUpperCase(); // Uppercase the water condition
+            if (conditionUC == "GOOD") { // Is the water condition good?
+              sym.setText("Navaid, Blue"); // then put a blue circle
+            } else if (conditionUC == "POOR") { // Is the water condition poor?
+              sym.setText("Navaid, Amber"); // then put a yellow circle
+            } else if (conditionUC == "DRY" || conditionUC == "UNUSABLE") { // Is the water condition dry or unusable?
+              sym.setText("Navaid, Red"); // then put a red circle
+            } else { // otherwise is it "unk" or anything else
+              sym.setText("Navaid, White"); // then put a white circle
+            }
+            wpt.addContent(sym);
            
         }
     }
