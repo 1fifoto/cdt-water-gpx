@@ -57,12 +57,20 @@ function doGet(request) {
             nameText += values[i][3]; // concatenate water source name
             name.setText(nameText); // set text of name element
             wpt.addContent(name); // add name as child element of waypoint
+            
+            var statusText = "";
+            if (values[i][6] != "") { // does reported by exist?
+                statusText += values[i][6] + ": "; // concatenate reported by 
+            }
+            statusText += values[i][4]; // concatenate status
 
             var desc = XmlService.createElement("desc", ns); // create description element
-            // var descEncoded = htmlspecialchars(values[i][4], ENT_DISALLOWED); // Encode special characters
-            // desc.setText(descEncoded); // set text of description element
-            desc.setText(values[i][4]); // set text of description element
+            desc.setText(statusText); // set text of description element
             wpt.addContent(desc); // add description as child element of waypoint
+          
+            var cmt = XmlService.createElement("cmt", ns); // create comment element
+            cmt.setText(statusText); // set text of comment element
+            wpt.addContent(cmt); // add comment as child element of waypoint
           
             var sym = XmlService.createElement("sym", ns); // create sym element
             var conditionUC = values[i][9].toUpperCase(); // Uppercase the water condition
