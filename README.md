@@ -11,6 +11,6 @@ Condition. To use it, you import and upload it to Google docs.
 script/Code.gs
 ==============
 The `script/Code.gs` file is a Google docs script file which when run creates a
-GPX XML file to be downloaded as `cdtwatergpx.gpx`. The GPX XML file contains
+GPX XML file to be downloaded as `cdtwater.gpx`. The GPX XML file contains
 the necessary XML Namespaces to allow it to be verified using the following
 command: `SAXCount -v=always -n -s -f cdtwater.gpx`
