@@ -5,6 +5,9 @@ Converter from Continental Divide Trail Water Report in Google Docs Spreadsheet 
 3. Select Tools menu item > Script Editor
 4. Edit Code.gs file in window either manually or better yet via GITHUB: https://github.com/1fifoto/cdt-water-gpx
 5. Select Run menu item > doGet to authorize access and test out changes
+6. On Water Report page of CDTC website [http://continentaldividetrail.org/water-report/] or 
+the Trail Unites Us website [http://thetrailunitesus.com/water/] 
+add link to access conversion script to download GPX file: https://script.google.com/macros/s/AKfycbySRs1sQTZYOC87JCNSedQ4iB_hSQZpRZHaRBsg0rAFyr6nRuo/exec
 
 spreadsheet/CDT WATER 2015.xlsx
 ===============================
