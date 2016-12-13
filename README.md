@@ -1,4 +1,10 @@
-Convertor from Continental Divide Trail Water Report in Google Docs Spreadsheet format to GPX XML file 
+Converter from Continental Divide Trail Water Report in Google Docs Spreadsheet format to GPX XML file 
+
+1. Go to Google Drive: https://drive.google.com/drive/my-drive
+2. Select CDT WATER 2016 file (owned by Elisabeth Chaplin) and open it by double clicking on it
+3. Select Tools menu item > Script Editor
+4. Edit Code.gs file in window either manually or better yet via GITHUB: https://github.com/1fifoto/cdt-water-gpx
+5. Select Run menu item > doGet to authorize access and test out changes
 
 spreadsheet/CDT WATER 2015.xlsx
 ===============================
